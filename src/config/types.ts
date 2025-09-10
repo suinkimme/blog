@@ -1,4 +1,4 @@
-import { RESUME_DATA_EN } from '@/data/resume-data-en';
+// import { RESUME_DATA_EN } from '@/data/resume-data-en';
 import { RESUME_DATA_KO } from '@/data/resume-data-ko';
 
 export interface PostMatter {
@@ -49,10 +49,10 @@ export interface Project extends ProjectMatter {
 }
 
 export const DATAS = {
-  en: {
-    data: RESUME_DATA_EN,
-    aboutClassName: '',
-  },
+  // en: {
+  //   data: RESUME_DATA_EN,
+  //   aboutClassName: '',
+  // },
   ko: {
     data: RESUME_DATA_KO,
     aboutClassName: 'sm:whitespace-pre-wrap whitespace-normal',
