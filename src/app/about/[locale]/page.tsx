@@ -144,13 +144,11 @@ export default async function AboutPage({ params: { locale } }: Props) {
                 <h4 className='mt-7 font-semibold  leading-none print:text-[12px]'>{work.title}</h4>
                 {work.points && (
                   <ul className='mt-4 list-disc space-y-2 text-sm'>
-                    {work.points.map((point, index) => 
-                       (
-                        <li key={index} className='ml-5 text-muted-foreground'>
-                          {point}
-                        </li>
-                      )
-                    )}
+                    {work.points.map((point, index) => (
+                      <li key={index} className='ml-5 text-muted-foreground'>
+                        {point}
+                      </li>
+                    ))}
                   </ul>
                 )}
               </Card>

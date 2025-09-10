@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.d5br5.dev/sitemap.xml
+Sitemap: https://www.suinkim.me/sitemap.xml

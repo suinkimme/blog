@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='h-full scroll-my-20 scroll-smooth' suppressHydrationWarning>
+    <html lang='ko' className='h-full scroll-my-20 scroll-smooth' suppressHydrationWarning>
       <body className='flex min-h-screen flex-col font-pretendard'>
         <PostHogProvider>
           <ThemeProvider>
