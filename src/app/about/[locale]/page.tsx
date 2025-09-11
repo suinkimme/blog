@@ -11,6 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/
 import * as D from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Section } from '@/components/ui/section';
+import { baseDomain, blogThumbnailURL } from '@/config/const';
 import { DATAS, Locale } from '@/config/types';
 import { getCareerProjectList, getSortedProjectList } from '@/lib/project';
 import { cn } from '@/lib/utils';
@@ -28,9 +29,24 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params: { locale } }: Props): Metadata {
   const data = DATAS[locale].data;
+
+  const title = `${data.name} | ${data.about}`;
   return {
-    title: `${data.name} | ${data.about}`,
+    title,
     description: data.summary,
+
+    openGraph: {
+      title,
+      description: data.summary,
+      type: 'website',
+      url: `${baseDomain}/about/${locale}`,
+      images: [blogThumbnailURL],
+    },
+    twitter: {
+      title,
+      description: data.summary,
+      images: [blogThumbnailURL],
+    },
   };
 }
 
