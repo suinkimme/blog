@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useTheme } from 'next-themes';
 
@@ -11,12 +11,16 @@ const categoryId = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID || '';
 export default function Giscus() {
   const ref = useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // https://github.com/giscus/giscus/tree/main/styles/themes
   const theme = resolvedTheme === 'dark' ? 'dark' : 'light';
 
   useEffect(() => {
-    if (!ref.current || ref.current.hasChildNodes()) return;
+    if (!ref.current) return;
+
+    // 기존 giscus 요소들 제거
+    setIsLoaded(false);
 
     const scriptElem = document.createElement('script');
     scriptElem.src = 'https://giscus.app/client.js';
@@ -35,14 +39,28 @@ export default function Giscus() {
     scriptElem.setAttribute('data-theme', theme);
     scriptElem.setAttribute('data-lang', 'ko');
 
+    scriptElem.onload = () => setIsLoaded(true);
     ref.current.appendChild(scriptElem);
   }, [theme]);
 
   // https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#isetconfigmessage
   useEffect(() => {
-    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
-    iframe?.contentWindow?.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
-  }, [theme]);
+    if (!isLoaded) return;
+
+    const sendMessage = () => {
+      const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+      if (iframe) {
+        iframe.contentWindow?.postMessage(
+          { giscus: { setConfig: { theme } } },
+          'https://giscus.app'
+        );
+      } else {
+        setTimeout(sendMessage, 100);
+      }
+    };
+
+    sendMessage();
+  }, [theme, isLoaded]);
 
   return <section ref={ref} />;
 }
