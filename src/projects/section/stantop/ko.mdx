@@ -1,0 +1,35 @@
+---
+title: '병원 영업자용 CRM 앱: Toplink'
+desc: '스탠탑 비뇨기과 영업팀을 위한 인입 전화 기반 CRM 연동 상담 추적 앱'
+startMonth: '2022-12'
+endMonth: '2023-01'
+tags: 'FE, React Native, Android'
+googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.stantop'
+---
+
+![](/projects/stantop/1.png)
+
+### 주요 기능
+- 영업팀 상담 전화를 기반으로 한 CRM 연동 상담 추적
+- 전화 인입 시 오버레이 팝업으로 상담 이력 확인 및 기록
+- 고객 전화번호 기반 상담 이력 자동 조회 및 신규 등록 지원
+
+### Tech Stack (FE)
+- React, React Native, Android
+
+### Role
+> 프론트엔드 개발 전반 담당
+
+#### 전화 인입 팝업 기능 개발
+- Android 전화 수신 브로드캐스트를 활용해 인입 이벤트를 감지
+- SYSTEM_ALERT_WINDOW 기반 오버레이 팝업으로 상담 UI 제공
+- Android 10+ 환경에서 권한·백그라운드 제한 문제를 해결하기 위해 포그라운드 서비스로 전환
+
+#### 상담 이력 연동
+- RN 브리지 이벤트를 통해 인입 번호에 맞는 상담 이력을 자동 출력
+- 번호 인식 실패 시 직접 입력을 통한 상담 이력 조회 기능 제공
+- 상담 이력 기록 및 관리 기능 구현
+
+#### 문제 해결 및 배포
+- OS에 의해 앱이 지속 종료되는 문제를 해결하기 위해 실행 로직을 백그라운드 감지 → 포그라운드 실행으로 변경
+- 웹뷰 기반으로 구현 및 배포하여 안정적인 운영 확보

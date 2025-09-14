@@ -1,0 +1,48 @@
+---
+title: '프랜차이즈 가맹점 관리 앱: SV'
+desc: '가맹점 서비스 품질을 슈퍼바이저가 손쉽게 관리할 수 있는 모바일 앱'
+startMonth: '2023-02'
+endMonth: '2025-03'
+tags: 'FE, React Native, zustand'
+googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.hkcommsv&hl=ko'
+appStoreUrl: 'https://apps.apple.com/kr/app/%EC%B2%AD%EB%85%84%EB%8B%A4%EB%B0%A9-sv%EC%95%B1/id1669677803'
+---
+
+![](/projects/franchise-supervisor/1.png)
+
+### 주요 기능
+- 가맹본사 슈퍼바이저가 매장 점검·관리를 효율적으로 수행할 수 있는 모바일 앱
+- 점검 데이터 기반 통계 시각화 및 인건비 자동 계산 기능 제공
+- 점주와 본사 간 실시간 커뮤니케이션 지원
+- 10여 개 이상의 브랜드에 확장 적용 및 마켓 배포 운영
+
+### Tech Stack
+- React Native, Socket.IO, Firebase Cloud Messaging, Storybook
+
+### Role
+> 프론트엔드 전반 개발 및 프로젝트 총괄 (2년 이상 유지보수 및 신규 기능 개발)
+
+#### 프로젝트 관리 및 고객사 응대
+- SDLC 총괄 및 정기 미팅 주도, 고객사 요구사항 반영
+- 마일스톤별 데모 시연 진행 및 피드백 수용
+
+#### 디자인 시스템 및 공통 컴포넌트 개발
+- 브랜드별 UX 일관성을 위한 디자인 토큰, 테마 분기 구조 설계
+- 공통 UI 컴포넌트를 TypeScript로 구현해 사내 NPM 패키지로 배포
+- Storybook 환경 구성으로 컴포넌트 시각화 및 테스트 지원
+
+#### 실시간 커뮤니케이션 기능
+- Firebase Cloud Messaging과 Socket.IO 기반 실시간 채팅 구현
+- 전송/수신 로직을 커스텀 훅으로 분리해 이벤트 흐름 명확화 및 재사용성 확보
+
+#### 매장 운영 기능 및 성능 최적화
+- 긴 점검 문서를 단계별로 분리하고 WebView + postMessage 양방향 통신으로 성능 개선
+- 서명 입력을 WebView Canvas API로 구현하여 점검 문서 작성 흐름에 통합
+
+#### 인건비 및 통계 기능
+- 점검 데이터 기반 통계 화면 설계·구현, 드릴다운 구조로 세부 근거 제공
+- 인건비 및 주휴수당 자동 계산 기능 구현 (최저임금 API 연동 및 동적 검증)
+
+#### 배포 및 운영
+- Google Play와 Apple App Store 모두에 직접 앱 심사 요청 및 배포
+- 마켓별 요구사항에 맞춰 target API 버전 업그레이드, 메타데이터, 스크린샷, 접근 정책 등을 조정
