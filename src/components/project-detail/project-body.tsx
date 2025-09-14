@@ -17,7 +17,7 @@ interface Props {
 }
 
 export const ProjectBody = ({ project }: Props) => {
-  const { gitRepoUrl, link } = project;
+  const { gitRepoUrl, link, googlePlayUrl, appStoreUrl } = project;
   return (
     <Suspense fallback={<>Loading...</>}>
       <div className='prose project px-5 dark:prose-invert'>
@@ -25,6 +25,8 @@ export const ProjectBody = ({ project }: Props) => {
           <div className='mt-1 flex flex-wrap justify-center gap-4'>
             {gitRepoUrl && <GitRepo url={gitRepoUrl} />}
             {link && <ServiceLink url={link} />}
+            {googlePlayUrl && <ServiceLink url={googlePlayUrl} />}
+            {appStoreUrl && <ServiceLink url={appStoreUrl} />}
           </div>
         )}
         <MDXRemote

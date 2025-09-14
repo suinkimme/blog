@@ -39,6 +39,8 @@ export interface ProjectMatter {
   tags: string;
   gitRepoUrl?: string;
   link?: string;
+  googlePlayUrl?: string;
+  appStoreUrl?: string;
 }
 
 export interface Project extends ProjectMatter {
