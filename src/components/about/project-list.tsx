@@ -19,7 +19,7 @@ export default function ProjectList({ list }: Props) {
             <D.DialogTitle className='text-center text-xl'>
               <div className='relative m-auto w-fit'>
                 {project.title}
-                {project.link && (
+                {(project.link || project.googlePlayUrl || project.appStoreUrl) && (
                   <div className='absolute -right-3 top-3 size-1 rounded-full bg-green-500' />
                 )}
               </div>

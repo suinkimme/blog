@@ -1,7 +1,9 @@
 import { Suspense } from 'react';
 
 import { MdxComponents } from '../mdx';
+import { AppStoreLink } from '@/components/about/app-store-link';
 import { GitRepo } from '@/components/about/git-repo';
+import { GooglePlayLink } from '@/components/about/google-play-link';
 import { ServiceLink } from '@/components/about/service-link';
 import { Project } from '@/config/types';
 // @ts-expect-error no types
@@ -21,12 +23,12 @@ export const ProjectBody = ({ project }: Props) => {
   return (
     <Suspense fallback={<>Loading...</>}>
       <div className='prose project px-5 dark:prose-invert'>
-        {(link || gitRepoUrl) && (
+        {(link || gitRepoUrl || googlePlayUrl || appStoreUrl) && (
           <div className='mt-1 flex flex-wrap justify-center gap-4'>
             {gitRepoUrl && <GitRepo url={gitRepoUrl} />}
             {link && <ServiceLink url={link} />}
-            {googlePlayUrl && <ServiceLink url={googlePlayUrl} />}
-            {appStoreUrl && <ServiceLink url={appStoreUrl} />}
+            {googlePlayUrl && <GooglePlayLink url={googlePlayUrl} />}
+            {appStoreUrl && <AppStoreLink url={appStoreUrl} />}
           </div>
         )}
         <MDXRemote

@@ -7,7 +7,8 @@ interface Props {
 }
 
 export function ProjectCard({ project }: Props) {
-  const { title, desc, startMonthString, endMonthString, tags, link } = project;
+  const { title, desc, startMonthString, endMonthString, tags, link, googlePlayUrl, appStoreUrl } =
+    project;
   const tagList = tags.split(',').map((item) => item.trim());
 
   return (
@@ -16,7 +17,9 @@ export function ProjectCard({ project }: Props) {
         <div>
           <CardTitle className='flex items-center gap-1.5 text-base'>
             {title}
-            {link && <div className='size-1 rounded-full bg-green-500' />}
+            {(link || googlePlayUrl || appStoreUrl) && (
+              <div className='size-1 rounded-full bg-green-500' />
+            )}
           </CardTitle>
           <CardDescription className='mt-1'>
             {startMonthString} - {endMonthString}
