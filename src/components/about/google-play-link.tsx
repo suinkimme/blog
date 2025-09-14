@@ -12,7 +12,7 @@ export const GooglePlayLink = ({ url }: Props) => {
     <Link href={url} target='_blank'>
       <Button className='gap-2' variant='outline'>
         <Play className='size-4' />
-        Link to Google Play
+        Google Play
       </Button>
     </Link>
   );

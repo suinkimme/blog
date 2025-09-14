@@ -12,7 +12,7 @@ export const AppStoreLink = ({ url }: Props) => {
     <Link href={url} target='_blank'>
       <Button className='gap-2' variant='outline'>
         <Apple className='size-4' />
-        Link to App Store
+        App Store
       </Button>
     </Link>
   );
