@@ -10,7 +10,7 @@ interface Props {
 
 export const MiniPostCard = ({ post }: Props) => {
   return (
-    <Link href={post.url} className='flex-1 max-[980px]:last:hidden'>
+    <Link href={post.url} className='flex-1'>
       <li
         className={cn(
           'flex h-full flex-1 flex-col justify-center gap-0 px-3 py-1 max-[640px]:py-2',
