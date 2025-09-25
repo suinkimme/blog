@@ -26,7 +26,7 @@ export const RESUME_DATA_KO = {
       school: '동국대학교',
       degree: '컴퓨터공학 학사',
       start: '2020',
-      end: null,
+      end: '휴학',
     },
   ],
   work: [
