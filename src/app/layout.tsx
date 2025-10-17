@@ -47,8 +47,8 @@ export default function RootLayout({
           <Toaster />
           <Analytics />
           <SpeedInsights />
-          <GoogleAnalytics gaId='G-TRBVGE9TYP' />
-          <GoogleTagManager gtmId='G-TRBVGE9TYP' />
+          <GoogleAnalytics gaId='G-QEB4Y59C1X' />
+          <GoogleTagManager gtmId='G-QEB4Y59C1X' />
         </PostHogProvider>
       </body>
     </html>
