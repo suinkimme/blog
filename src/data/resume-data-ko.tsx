@@ -45,6 +45,15 @@ export const RESUME_DATA_KO = {
         '협업 프로세스 체계화 및 팀 리딩',
       ],
     },
+    {
+      company: '피프티브릿지',
+      link: 'https://fiftybridge.com/',
+      title: 'Mobile Front-end Developer',
+      start: '2018. 12.',
+      end: '2019. 11.',
+      description: 'CRM 및 관제 솔루션 개발 전문 기업',
+      points: ['기업 프로모션 랜딩페이지 개발', '데이터 관리 시스템 개발'],
+    },
   ],
   skills: ['JavaScript', 'TypeScript', 'React', 'React Native'],
 } as const;
