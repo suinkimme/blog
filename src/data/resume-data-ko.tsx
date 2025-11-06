@@ -33,7 +33,7 @@ export const RESUME_DATA_KO = {
     {
       company: 'KRAFTON',
       link: 'https://midaworks.kr/',
-      title: 'Mobile Front-end Developer',
+      title: 'Software Engineer, Full Stack',
       start: '2025. 12.',
       end: '',
       description: '글로벌 게임 개발 및 퍼블리싱 전문 기업',
@@ -57,7 +57,7 @@ export const RESUME_DATA_KO = {
     {
       company: '피프티브릿지',
       link: 'https://fiftybridge.com/',
-      title: 'Mobile Front-end Developer',
+      title: 'Web Front-end Developer',
       start: '2018. 12.',
       end: '2019. 11.',
       description: 'CRM 및 관제 솔루션 개발 전문 기업',
