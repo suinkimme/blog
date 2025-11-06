@@ -35,6 +35,7 @@ export const RESUME_DATA_KO = {
       link: 'https://www.krafton.com/',
       // title: 'Software Engineer, Full Stack',
       start: '2025. 12.',
+      end: '',
       description: '입사 예정',
     },
     {
