@@ -31,13 +31,9 @@ export const RESUME_DATA_KO = {
   ],
   work: [
     {
-      company: 'KRAFTON',
-      link: 'https://midaworks.kr/',
-      title: 'Software Engineer, Full Stack',
-      start: '2025. 12.',
-      end: '',
-      description: '글로벌 게임 개발 및 퍼블리싱 전문 기업',
-      points: ['입사 예정'],
+      company: '크래프톤',
+      link: 'https://www.krafton.com/',
+      description: '입사 예정',
     },
     {
       company: '미다웍스',
