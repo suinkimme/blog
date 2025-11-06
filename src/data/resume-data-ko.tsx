@@ -33,6 +33,8 @@ export const RESUME_DATA_KO = {
     {
       company: '크래프톤',
       link: 'https://www.krafton.com/',
+      // title: 'Software Engineer, Full Stack',
+      start: '2025. 12.',
       description: '입사 예정',
     },
     {
