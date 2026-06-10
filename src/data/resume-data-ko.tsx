@@ -33,11 +33,15 @@ export const RESUME_DATA_KO = {
     {
       company: '크래프톤',
       link: 'https://www.krafton.com/',
-      title: '',
+      title: 'Software Developer',
       start: '2025. 12.',
-      end: '',
-      description: '입사 예정',
-      points: [],
+      end: '재직 중',
+      description: '배틀그라운드를 서비스하는 글로벌 게임 개발·퍼블리싱 기업',
+      points: [
+        'Jungle Compass(LMS) 0 to 1 프로젝트 설계·개발',
+        'ISMS 인증 심사 대응 및 보안 정책 수립·운영',
+        '크래프톤 정글 교육생 기술 멘토링',
+      ],
     },
     {
       company: '미다웍스',
